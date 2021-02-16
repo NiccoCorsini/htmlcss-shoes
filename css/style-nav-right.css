@@ -1,0 +1,112 @@
+/* GENERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    position: relative;
+}
+
+/* HEADER + NAV TO RIGHT SIDE */
+.container header{
+    z-index: 2;
+    width: 50px;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    right: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.container header nav.list-father{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+#lista::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+#lista > li{
+    float: left;    
+    list-style: none;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+#lista > li > a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+#lista > li > a:hover{
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+}
+
+/* LAYOVER */
+.sectionvh::before{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0,0,0,0.2);
+}
+
+/* IN-PAGE SECTIONS */
+.sectionvh{
+    height: 100vh;
+    position: relative;
+}
+
+.sectionvh .contents{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+#first{
+    background-color: red;
+}
+
+#second{
+    background-color: royalblue;
+}
+
+#third{
+    background-color: seagreen;
+}
+
+#first .contents::before{
+    content: url(../img/01.png);
+}
+
+#second .contents::before{
+    content: url(../img/02.png);
+}
+
+#third .contents::before{
+    content: url(../img/03.png);
+}
