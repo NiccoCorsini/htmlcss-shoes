@@ -16,30 +16,26 @@ html{
 
 /* HEADER + NAV TO RIGHT SIDE */
 .container header{
-    z-index: 2;
+    z-index: 0;
     width: 50px;
     height: 100vh;
     position: fixed;
     top: 0%;
     right: 0;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0, 0.2);
 }
 
 .container header nav.list-father{
     position: absolute;
+    width: 100%;
     top: 50%;
     right: 0;
     transform: translate(0, -50%);
 }
 
-#lista::after{
-    content: '';
-    display: table;
-    clear: both;
-}
-
 #lista > li{
-    float: left;    
+    text-align: center;
+    display: block;
     list-style: none;
     line-height: 40px;
     margin: 0;
@@ -47,14 +43,14 @@ html{
 }
 
 #lista > li > a{
+    width: 100%;
     color: white;
     text-decoration: none;
-    padding: 10px;
-    margin: 10px;
     transition: 0.5s;
 }
 
 #lista > li > a:hover{
+    padding: 12px;
     background-color: white;
     border-radius: 50%;
     color: black;
@@ -73,6 +69,7 @@ html{
 
 /* IN-PAGE SECTIONS */
 .sectionvh{
+    z-index: -1;
     height: 100vh;
     position: relative;
 }
